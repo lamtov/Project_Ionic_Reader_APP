@@ -1,0 +1,77 @@
+page-signup {
+  $background_welcome: rgba(30, 22, 47, 0.28);
+
+  .scroll-content {
+    opacity: 0.8;
+    overflow: hidden;
+    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ion-item {
+    color: #fff !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+  form {
+    width: 100%;
+  }
+
+  ion-content {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  ion-grid {
+    z-index: 10;
+    position: absolute;
+    padding: 0 16px !important;
+    bottom: 5%;
+    top: 11%;
+  }
+  .icon_button {
+    margin-right: 10px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  .btn_signup{
+    border-width: 1px !important;
+    margin-top: 20px;
+  }
+
+  .img_back_wrapper {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    max-width: 11%;
+    border-radius: 50%;
+    padding: 4px 10px 4px 10px;
+    border: 3px solid #fff;
+    cursor: pointer;
+  }
+  .title_wrapper {
+    margin-top: 10%;
+  }
+
+  .signin_wrapper {
+    margin-top: 20px;
+    width: 100%;
+  }
+  h6 {
+    font-size: 14px;
+    color: #b3aeae !important;
+  }
+  h6 > strong {
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .forgot_password_wrapper {
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}

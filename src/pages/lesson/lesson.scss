@@ -1,0 +1,67 @@
+page-lesson {
+
+
+  $opacity_scroll_content: 0.95;
+
+  $max_size_img_wrapper:  64px;
+
+  $color_img_title: #fff;
+
+  ion-content{
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+  .scroll-content {
+    overflow-y: hidden !important;
+  }
+  /*
+  Lam Design
+   */
+  ion-list-header{
+    position: absolute !important;
+    top:0%;
+    margin-top: 3% !important;
+    background-color: rgba(0,0,0,0) !important;
+    border: none !important;
+    img{
+      max-height: 40px !important;
+    }
+  }
+  .imgBackArrow{
+    position: absolute;
+    top:3.4%;
+    margin-top: 3%;
+    margin-left: 3%;
+    z-index:100;
+    max-height:40px;
+  }
+
+
+  .centerDiv{
+    width: 80%;
+    margin: auto;
+    margin-top: 30%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+  }
+
+  #over {
+    position: absolute;
+    bottom: 20px; width:100%;
+  }
+  #over img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 230px;
+  }
+
+}

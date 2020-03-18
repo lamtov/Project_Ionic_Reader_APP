@@ -1,0 +1,67 @@
+page-main {
+  $background_main: rgba(30, 22, 47, 0.1);
+
+  .scroll-content {
+    background-color: $background_main;
+    overflow: hidden;
+    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ion-content {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  ion-grid {
+    z-index: 100;
+    position: absolute;
+  }
+
+  #img_title_wrapper {
+    margin-top:32px;
+  }
+  .img_brillkids_wrapper {
+    max-width: 80%;
+    margin: auto;
+  }
+  .img_reader_wrapper {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .action_main_wrapper {
+    position: absolute;
+    bottom: 3%;
+    left: 8%;
+    display: inline-flex;
+  }
+
+  ion-grid {
+    padding-top: 80px !important;
+  }
+  ion-col {
+    margin: auto !important;
+  }
+  .img_country_wrapper, .img_settings_wrapper {
+    max-width:60%;
+    margin: auto;
+  }
+
+  .img_country_wrapper, .img_play_wrapper, .img_settings_wrapper, .img_share_wrapper, .img_rate_wrapper {
+    cursor: pointer;
+  }
+
+  .img_share_wrapper , .img_rate_wrapper {
+    max-width: 52px;
+  }
+  .img_share_wrapper > img, .img_rate_wrapper > img {
+   border-radius: 50%;
+   background-color: #040308;
+ }
+  .img_rate_wrapper > img {
+    border: 2px solid #000;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,64 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_welcome_page + ')'}">
+
+  <div text-center>
+    <h1 text-center color="white" [@zoomInAnimation]="btnZoomInAnimation">B</h1>
+  </div>
+
+  <div>
+    <p text-center color="white" [@zoomInAnimation]="btnZoomInAnimation">Brillkids app make your kid smarter and better!</p>
+  </div>
+
+  <ion-grid padding>
+
+
+    <ion-row>
+      <ion-col width-50>
+        <button style="width: 100%;" ion-button color="white" outline (click)="goToSignIn()"
+                [@fadeInAnimation]="btnFadeInLeftAnimation"
+                [@goto]="btnGoToLeftAnimation"
+                (@goto.done)="goToSignInDone($event)"
+        >Sign in</button>
+      </ion-col>
+      <ion-col width-50>
+        <button style="width: 100%;" ion-button color="white" outline (click)="goToSignUp()"
+                [@fadeInAnimation]="btnFadeInRightAnimation"
+                [@goto]="btnGoToRightAnimation"
+                (@goto.done)="goToSignUpDone($event)"
+        >Sign up</button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <button ion-button color="white" outline full class="btn_border_welcome"
+              [@zoomInAnimation]="btnZoomInAnimation"
+      >
+        <ion-icon class="icon_button" name="logo-facebook"></ion-icon>
+        Connect with Facebook
+      </button>
+    </ion-row>
+
+
+    <ion-row>
+      <button ion-button color="white" outline full  class="btn_border_welcome btn_color" (click)="goToCategory()"
+              [@zoomInAnimation]="btnZoomInAnimation"
+              [@goto]="btnGoToAnimation"
+              (@goto.done)="goToCategoryDone($event)"
+      >
+        <ion-icon class="icon_button" name="home"></ion-icon>
+        Start as a Guess
+      </button>
+    </ion-row>
+
+    <ion-row>
+      <div class="terms_and_conditions">
+        <h6 text-center color="white">Terms and Conditions</h6>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+
+

@@ -1,0 +1,59 @@
+page-share {
+  background: rgba(0,0,0,0.55);
+  ion-content {
+    margin-top: 20%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 60% !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+  }
+  .scroll-content {
+    overflow: hidden;
+    padding: 70px 15px;
+  }
+
+  .img_fb_share > img, .img_more_share > img, .img_tt_share>img {
+    cursor: pointer;
+  }
+
+  #img_title_share {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  #text_wrapper {
+    padding: 2%;
+    text-align: center;
+  }
+  #text_wrapper > p {
+    color: #461aea;
+  }
+  #text_wrapper > h4 {
+    color: #16ce42;
+  }
+
+  #img_social_wrapper {
+    display: inline-flex;
+  }
+  .img_fb_share, .img_more_share, .img_tt_share {
+    margin-right: auto;
+    display: block;
+    max-width: 20%;
+  }
+
+  #img_social_wrapper {
+    position: absolute;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    text-align: center;
+  }
+}

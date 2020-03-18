@@ -1,0 +1,49 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_main + ')'}">
+
+  <div id="img_title_wrapper">
+    <div class="img_brillkids_wrapper">
+      <img [src]="icon_title_main" alt="">
+    </div>
+    <div class="img_reader_wrapper">
+      <img [src]="icon_title_main_2" alt="">
+    </div>
+
+  </div>
+
+  <ion-grid padding>
+
+    <ion-row>
+      <ion-col width-30>
+        <div class="img_country_wrapper">
+          <img [src]="icon_country_main" alt="">
+        </div>
+      </ion-col>
+
+      <ion-col width-40>
+        <div class="img_play_wrapper">
+          <img [src]="icon_play_main" alt="" (click)="goToLevel()"  [@bounceInAnimation]="bounceInState"  (@bounceInAnimation.done)="animationDone($event)">
+        </div>
+      </ion-col>
+
+      <ion-col width-30>
+        <div class="img_settings_wrapper">
+          <img [src]="icon_settings_main" alt="" (click)="goToSettings()">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="action_main_wrapper">
+  <div class="img_share_wrapper">
+    <img [src]="icon_share_main" alt="" (click)="goToShare()">
+  </div>
+  <div class="img_rate_wrapper">
+    <img [src]="icon_rate_main" alt="" (click)="goToRate()">
+  </div>
+</div>
+</ion-content>
+
+
+
+
+

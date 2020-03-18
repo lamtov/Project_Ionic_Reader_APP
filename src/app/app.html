@@ -1,0 +1,28 @@
+<ion-menu [content]="content" id="app_navigation_drawer">
+
+  <ion-header [ngStyle]="{'background-image': 'url(' + bg_avatar + ')'}">
+    <div class="img_wrapper">
+      <img [src]="icon_avatar"/>
+    </div>
+    <ion-title class="title_wrapper">ThieuNv: 14 Tuoi</ion-title>
+  </ion-header>
+
+  <ion-content>
+
+    <ion-list>
+
+      <h1>I'M COMMING</h1>
+      <button class="btn_page" ion-item *ngFor="let p of pages" (click)="openPage(p)" icon-left>
+        <ion-icon [name]="'logo-' + p.icon" [ngStyle]="{'color': p.color}" item-left></ion-icon>
+        {{ p.title }}
+      </button>
+      <button class="btn_page" ion-item (click)="openSettings()" icon-left>
+        <ion-icon [name]="'logo-nodejs'" [ngStyle]="{'color': '#78BD43'}" item-left></ion-icon>
+        Settings
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

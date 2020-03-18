@@ -1,0 +1,24 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_share + ')'}">
+
+  <div id="img_title_share">
+    <img [src]="icon_title_share" alt="">
+  </div>
+
+  <div id="text_wrapper">
+    <p>Do your friends have children ages 1 to 10</p>
+    <h4>Share this app, so they ca benefit from it too.</h4>
+  </div>
+
+  <div id="img_social_wrapper">
+    <div class="img_fb_share" (click)="goBack()">
+      <img [src]="icon_facebook_share" alt="">
+    </div>
+    <div class="img_tt_share" (click)="goBack()">
+      <img [src]="icon_twitter_share" alt="">
+    </div>
+    <div class="img_more_share" (click)="goBack()">
+      <img [src]="icon_more_share" alt="">
+    </div>
+  </div>
+
+</ion-content>

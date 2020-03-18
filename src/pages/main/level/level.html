@@ -1,0 +1,28 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_level + ')'}">
+
+
+  <img [src]="icon_back_level" item-left class="imgBackArrow"  (click)="onClickBack()">
+
+
+  <ion-slides #loopSlider  pager (ionSlideWillChange)="onSlideWillChanged($event)" >
+    <ion-slide class="slide_style_wrapper" item-left [ngStyle]="{'margin-left': marginLeft}">
+      <div class="icon_level_wrapper"  *ngFor="let icon of firstItem">
+        <div class="icon_wrapper" [ngStyle]="{'background-image': 'url(' + icon_bg_all_level + ')'}">
+          <img [src]="icon.url_level" (click)="goToLesson(icon.id)"/>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide *ngFor="let icons of slides; let i = index;" class="slide_style_wrapper" item-left>
+
+      <div class="icon_level_wrapper"  *ngFor="let icon of icons">
+        <div class="icon_wrapper" [ngStyle]="{'background-image': 'url(' + icon_bg_all_level + ')'}">
+          <img [src]="icon.url_level" (click)="goToLesson(icon.id)"/>
+        </div>
+      </div>
+
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+

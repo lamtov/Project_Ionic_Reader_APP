@@ -1,0 +1,21 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_question + ')'}">
+
+  <div id="question_header_wrapper">
+    <h3>Answer the Question:</h3>
+  </div>
+
+
+  <div id="question_body_wrapper">
+    Which of these numbers are divisible by 3?
+    <div id="number_wrapper">
+      <ul>
+        <li (click)="dismiss()">5</li>
+        <li (click)="goToSettings()">3</li>
+        <li (click)="dismiss()">8</li>
+        <li (click)="dismiss()">2</li>
+        <li (click)="dismiss()">7</li>
+      </ul>
+    </div>
+  </div>
+
+</ion-content>

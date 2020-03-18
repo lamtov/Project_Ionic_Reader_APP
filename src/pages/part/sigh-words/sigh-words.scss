@@ -1,0 +1,86 @@
+page-sigh-words {
+  .text{
+    font-size: 100px;
+    font-family:"AppFont" ;
+    align-content: center;
+  }
+.Firsttext{
+  font-size: 50px;
+  font-family:"AppFont" ;
+  align-content: center;
+}
+
+  ion-footer {
+    height: 75px;
+    background-color: map-get($colors, dark);
+
+    ion-grid, ion-row, ion-col {
+      height: 100%;
+    }
+
+    ion-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      color: #f4f4f4;
+    }
+  }
+
+  $colors: (
+    primary:    #34495e,
+    secondary:  #2c3e50,
+    danger:     #f53d3d,
+    light:      #f4f4f4,
+    dark:       #353535
+  );
+  ion-content{
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  ion-slide{
+    background: no-repeat center center;
+    -webkit-background-size: 95% 95%;
+    -moz-background-size: 95% 95%;
+    -o-background-size: 95% 95%;
+    background-size: 100% 100%;
+    background-position: center top;
+    img{
+      box-shadow:
+        0px 0px 0px 2px rgba(178,122,5,0.6),
+        0px 0px 0px 5px #fff,
+        0px 0px 0px 5px rgba(178,122,5,0.2);
+
+      width: 81% !important;
+    }
+  }
+  ion-footer{
+    opacity: 0.7;
+  }
+  .scroll-content {
+    overflow-y: hidden !important;
+  }
+  .imgBackArrow{
+    position: absolute;
+    top:3.4%;
+    margin-top: 3%;
+    margin-left: 3%;
+    z-index:100;
+    max-height:40px;
+  }
+  .imgGreenVolume{
+    position: absolute;
+    top:3.4%;
+    right:0.3%;
+    margin-top: 3%;
+    margin-right: 3%;
+    z-index:100;
+    max-height:40px;
+  }
+
+}

@@ -1,0 +1,32 @@
+<ion-content>
+
+  <div id="img_header_wrapper">
+    <div class="img_love_wrapper">
+      <img [src]="icon_love_rate" alt="">
+    </div>
+    <div class="img_rate_wrapper">
+      <img [src]="icon_title_rate" alt="">
+    </div>
+  </div>
+
+  <div id="board_wrapper">
+    <div class="img_star_rate">
+      <div class="img_star" *ngFor="let icon of [1, 2, 3, 4, 5]">
+        <img [src]="icon_star_rate" alt="">
+      </div>
+
+    </div>
+
+    <div class="text_wrapper">
+      <p text-center>Please rate this game on Google Play or App Store</p>
+      <h4 text-center>Ratings help us improve</h4>
+    </div>
+
+    <div class="btn_wrapper" (click)="goBack()">
+      <img [src]="icon_rate_it" alt="">
+    </div>
+  </div>
+
+
+
+</ion-content>

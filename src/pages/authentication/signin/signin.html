@@ -1,0 +1,62 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_signin + ')'}">
+
+  <div class="img_back_wrapper" (click)="backSignin()">
+    <img [src]="icon_back_signin" alt="">
+  </div>
+
+  <div padding class="title_wrapper">
+    <p text-center color="white">Sign In to use full functional of this application!</p>
+  </div>
+
+  <ion-grid padding>
+
+    <form>
+      <ion-row>
+          <ion-item>
+            <ion-label floating>Phone Number:</ion-label>
+            <ion-input type="text" [(ngModel)]="user.phone" name="phone"></ion-input>
+          </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Password:</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-col width-50>
+          <div color="white" text-left class="remember_me_wrapper">
+            <ion-label>Remember me?</ion-label>
+            <ion-toggle [(ngModel)]="user.remember" name="remember"></ion-toggle>
+          </div>
+        </ion-col>
+
+        <ion-col width-50>
+          <div text-right color="white" class="forgot_password_wrapper">Forgot password?</div>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <button ion-button color="white" outline full class="btn_signin" (click)="signinForm()">
+          <ion-icon padding-right style="font-size:24px;" name="person"></ion-icon>
+          Sign In
+        </button>
+      </ion-row>
+
+    </form>
+
+    <ion-row>
+      <div text-center class="signup_wrapper">
+        <h6 color="white">Don't have an account? <strong (click)="goToSignUp()">Sign Up</strong></h6>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+
+

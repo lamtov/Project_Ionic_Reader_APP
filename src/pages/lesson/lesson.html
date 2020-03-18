@@ -1,0 +1,46 @@
+<!--<ion-header  hide-nav-bar="true">-->
+<!--<ion-navbar >-->
+<!--&lt;!&ndash;<button ion-button menuToggle>&ndash;&gt;-->
+<!--&lt;!&ndash;<ion-icon name="menu"></ion-icon>&ndash;&gt;-->
+<!--&lt;!&ndash;</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<ion-title>Lesson</ion-title>&ndash;&gt;-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+
+
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_above + ')'}">
+
+
+  <img [src]="back_img" item-left class="imgBackArrow"  (click)="onClickBack()">
+
+  <ion-slides (ionSlideWillChange)="slideWillChanged()" (ionSlideDidChange)="slideDidChanged()">
+    <ion-slide *ngFor="let item of itemSlide">
+      <ion-list>
+        <ion-list-header>
+
+          <div item-right>
+            <span *ngFor="let md of item.md_Img">
+             <img [src]="md">
+            </span>
+            <img [src]="item.cup_img">
+          </div>
+        </ion-list-header>
+        <div class="centerDiv" (click)="onClickPage(item.i)">
+            <h1>{{item.nameH1}}</h1>
+          <img [src]="item.urlImage" [@bounceInAnimation]="item.bounceInState">
+        </div>
+
+
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+
+  <div id="over">
+    <img [src]="dot_img">
+  </div>
+  <!--<div ngClass="topItems">-->
+
+  <!--</div>-->
+  <!--<div ngClass="middleItems"></div>-->
+
+</ion-content>

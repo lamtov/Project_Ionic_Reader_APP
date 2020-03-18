@@ -1,0 +1,62 @@
+page-rate {
+  background: rgba(0,0,0,0.55);
+  ion-content {
+    margin-top: 15%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 70% !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    border: 7px solid #09baf0;
+    background-color: #fff7ff !important;
+  }
+
+  .scroll-content {
+    overflow: hidden;
+    padding: 16px;
+  }
+
+  .img_love_wrapper {
+    max-width: 30%;
+    position: absolute;
+  }
+  .img_rate_wrapper {
+    max-width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+
+  #board_wrapper {
+    margin-top: 100px;
+  }
+  .img_star_rate {
+    display: inline-flex;
+  }
+  .img_star {
+    width: 15%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .text_wrapper> p, .text_wrapper>h4 {
+    color: #1f1ae6;
+  }
+
+  .btn_wrapper {
+    border-radius: 17px 17px 17px 17px;
+    -moz-border-radius: 17px 17px 17px 17px;
+    -webkit-border-radius: 17px 17px 17px 17px;
+    border: 7px solid #de1384;
+    background-color:#47de84;
+    cursor: pointer;
+  }
+}

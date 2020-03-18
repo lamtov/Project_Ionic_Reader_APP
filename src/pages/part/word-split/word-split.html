@@ -1,0 +1,27 @@
+<!--
+  Generated template for the WordSplit page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+
+  <!--<ion-navbar>-->
+    <!--<ion-title>word_split</ion-title>-->
+  <!--</ion-navbar>-->
+
+<!--</ion-header>-->
+
+
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_above + ')'}">
+  <img [src]="back_img" item-left class="imgBackArrow"  (click)="onClickBack()">
+  <img [src]="volume_img" item-left class="imgGreenVolume"  >
+  <ion-slides (ionSlideDidChange)="slideChanged()" (ionSlideWillChange)="slideWillChange()">
+    <ion-slide *ngFor="let word of words"  [ngStyle]="{'background-image': 'url(' + bg_image_slide + ')'}">
+      <h1>
+        <span *ngFor="let split of word.wordsSplit; let i = index" (click)="playSplit(split)"  [id]="getID(word,i)" [ngStyle]="{color: split.color}" [class.highlight]="active == split.id || allActive == 1">{{split.text}}</span>
+      </h1>
+      <div class="colorDiv" [ngStyle]="{'color': red, 'width': getWidth(word)}"></div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

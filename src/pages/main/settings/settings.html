@@ -1,0 +1,39 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_image_settings + ')'}">
+
+  <div id="settings_wrapper">
+    <div id="img_back_wrapper">
+      <img [src]="icon_back_settings" alt="" (click)="goBack()">
+    </div>
+
+    <div id="img_title_wrapper">
+      <img [src]="icon_title_settings" alt="">
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <div class="img_music_wrapper">
+          <img [src]="iconSettings.url_music_state" alt="" (click)="setSettings('music')">
+        </div>
+      </ion-row>
+
+      <ion-row>
+        <ion-col width-50>
+          <div class="img_sound_wrapper">
+          <img [src]="iconSettings.url_sound_state" alt="" (click)="setSettings('sound')">
+        </div>
+        </ion-col>
+
+        <ion-col width-50>
+          <div class="img_vibration_wrapper">
+            <img [src]="iconSettings.url_vibration_state" alt="" (click)="setSettings('vibration')">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div id="over">
+   <h1>IN COMMING</h1>
+  </div>
+</ion-content>

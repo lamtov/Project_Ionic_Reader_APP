@@ -1,0 +1,38 @@
+1. Huong dan su dung audio trong provider
+- KHi muon chay am thanh phai su dung thang nay  vi no se tiet kiem ram hon la khai bao 1 audio moi trong page
+- Do lai tac dung cua provider, service, @Injectable() de biet them chi tiet
+Su dung vd trong file
+- import {AudioPlayer} from "../../providers/audio";
+- Cac ham hien co
+   audio.playOne('TenFile.mp3');  //Chay 1 lan dung cho click
+   audio.playLoop('TenFile.mp3)'; //Chay mai dung cho background audio
+   audio.stopPlay(); Ngung choi nhac
+
+- constructor(private  audio:AudioPlayer) {
+     audio.playLoop('TENFILE.mp3'); //Chi tren file khong thoi, ko co doan assets/source do trong code co roi
+   }
+   //Viet nhu nay thi khi doi tuong duoc khoi tao se thuc hien playLoop thang assets/source/TENFILE.mp3
+
+- Bo sung them la khong nen de trong constructor nhu tren vi no lam load hinh len cham
+- Nen su dung cac ham mac dinh cua NAV sau de chon thoi diem cho phu hop
+ionViewDidLoad	void	Runs when the page has loaded. This event only happens once per page being created. If a page leaves but is cached, then this event will not fire again on a subsequent viewing. The ionViewDidLoad event is good place to put your setup code for the page.
+ionViewWillEnter	void	Runs when the page is about to enter and become the active page.
+ionViewDidEnter	void	Runs when the page has fully entered and is now the active page. This event will fire, whether it was the first load or a cached page.
+ionViewWillLeave	void	Runs when the page is about to leave and no longer be the active page.
+ionViewDidLeave	void	Runs when the page has finished leaving and is no longer the active page.
+ionViewWillUnload	void	Runs when the page is about to be destroyed and have its elements removed.
+///////\\\xem chi tiet tai: http://ionicframework.com/docs/v2/api/navigation/NavController/
+2. Huong dan Viet MVC va su dung service
+MVC: models : File chua interface cua doi tuong
+id:number;
+  text:String;
+  filename:String;
+  mock_datas: Du lieu dang JSON
+  provider la cac file co chuc nang lay du lieu do vao page
+  Mock_Data duoc lam theo file exel trong readme cua list file mp3
+  Lay Default.ts lam vi du
+  =================Doc ky 2 file audio.ts va option-service.ts de su dung goi hinh anh, am thanh cho dung
+
+  =============Cai xong chay len roi chup hinh up len face, khong up thi chac la khong them doc luon cai nay.
+
+

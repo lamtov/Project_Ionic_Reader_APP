@@ -1,0 +1,78 @@
+<ion-content [ngStyle]="{'background-image': 'url(' + bg_signup + ')'}">
+
+  <div class="img_back_wrapper" (click)="backSignup()">
+    <img [src]="icon_back_signup" alt="">
+  </div>
+
+  <ion-grid padding>
+
+    <form>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Children name:</ion-label>
+          <ion-input type="text" [(ngModel)]="user.childrenName" name="childrenName"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Children age: {{user.childrenAge}}</ion-label>
+          <ion-range min="1" max="20" pin="true" [(ngModel)]="user.childrenAge" color="secondary" name="childrenAge">
+            <ion-icon range-left small name="person"></ion-icon>
+            <ion-icon range-right name="person"></ion-icon>
+          </ion-range>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Email: </ion-label>
+          <ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Phone Number:</ion-label>
+          <ion-input type="text" [(ngModel)]="user.phone" name="phone"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Password:</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+        </ion-item>
+      </ion-row>
+
+
+      <ion-row>
+        <button ion-button color="white" outline full class="btn_signup" (click)="signupForm()">
+          <ion-icon padding-right style="font-size:24px;" name="person-add"></ion-icon>
+          Sign Up
+        </button>
+      </ion-row>
+
+
+    </form>
+
+    <ion-row>
+      <div text-center class="signin_wrapper">
+        <h6 color="white">Already have an account? <strong (click)="goToSignIn()">Sign In</strong></h6>
+      </div>
+    </ion-row>
+
+
+    <ion-row>
+      <div text-center color="white" style="width: 100%;">
+        <div class="forgot_password_wrapper">Forgot password?</div>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+
+

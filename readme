@@ -1,0 +1,78 @@
+1. Tải về rồi chuyển sang branch tên mình xong gõ
+npm install
+copy các file trong assets vào src/assets
+chạy bằng ionic serve -lab
+
+
+=====> Cách Up
+git add .
+git reset -- node_modules src/assets /*===thu git reset -- node_modules src/assets www trước thấy lỗi thì thử cái kia ==*/
+git commit -m "FULLCODENHO"
+git push
+
+
+2. Huong dan su dung audio trong provider
+- KHi muon chay am thanh phai su dung thang nay  vi no se tiet kiem ram hon la khai bao 1 audio moi trong page
+- Do lai tac dung cua provider, service, @Injectable() de biet them chi tiet
+Su dung vd trong file
+- import {AudioPlayer} from "../../providers/audio";
+- Cac ham hien co
+   audio.playOne('TenFile.mp3');  //Chay 1 lan dung cho click
+   audio.playLoop('TenFile.mp3)'; //Chay mai dung cho background audio
+   audio.stopPlay(); Ngung choi nhac
+
+- constructor(private  audio:AudioPlayer) {
+     audio.playLoop('TENFILE.mp3'); //Chi tren file khong thoi, ko co doan assets/source do trong code co roi
+   }
+   //Viet nhu nay thi khi doi tuong duoc khoi tao se thuc hien playLoop thang assets/source/TENFILE.mp3
+
+- Bo sung them la khong nen de trong constructor nhu tren vi no lam load hinh len cham
+- Nen su dung cac ham mac dinh cua NAV sau de chon thoi diem cho phu hop
+ionViewDidLoad	void	Runs when the page has loaded. This event only happens once per page being created. If a page leaves but is cached, then this event will not fire again on a subsequent viewing. The ionViewDidLoad event is good place to put your setup code for the page.
+ionViewWillEnter	void	Runs when the page is about to enter and become the active page.
+ionViewDidEnter	void	Runs when the page has fully entered and is now the active page. This event will fire, whether it was the first load or a cached page.
+ionViewWillLeave	void	Runs when the page is about to leave and no longer be the active page.
+ionViewDidLeave	void	Runs when the page has finished leaving and is no longer the active page.
+ionViewWillUnload	void	Runs when the page is about to be destroyed and have its elements removed.
+///////\\\xem chi tiet tai: http://ionicframework.com/docs/v2/api/navigation/NavController/
+3. Huong dan Viet MVC va su dung service
+MVC: models : File chua interface cua doi tuong
+id:number;
+  text:String;
+  filename:String;
+  mock_datas: Du lieu dang JSON
+  provider la cac file co chuc nang lay du lieu do vao page
+  Mock_Data duoc lam theo file exel trong readme cua list file mp3
+  Lay Default.ts lam vi du
+  =================Doc ky 2 file audio.ts va option-service.ts de su dung goi hinh anh, am thanh cho dung
+
+  =============Cai xong chay len roi chup hinh up len face, khong up thi chac la khong them doc luon cai nay.
+
+
+
+  2 file exel bên cạnh kiểu như MENU LIST
+
+Tức là các bài được chia như trên, mục bên dưới là nội dung từng phần của 1 bài
+Vd trên kia có word split của bài 1 và bài 2 bên cạn ấn sang thanh bên dưới là .. của bài 1, bài 2
+Nội dung bài 1 sẽ là 7 cái 1 của 7 phần
+Bỏ qua phần tiếng anh, xem phần tiếng việt và phần file name bên cạnh chữ tương ứng với file
+Vd chữ vỗ sẽ tương ứng với bk-hn-actions-clap-1.png và bk-hn-actions-clap-2.png … bk-hn-actions-clap.mp3
+-==========================
+Khi viết nên dùng mô hình MVC model. Page. Provider
+Trong đó provider sẽ sử dụng filesystem để đọc file trong accset cho nó tự tạo biến chứ không khai báo 1000 biến nặng app. Cái này mai up code sau
+
+
+
+==== Themes : https://webcake.co/theming-an-ionic-2-application/=====
+
+
+
+
+======= Tut =====================
+1. Generate
+  ionic g page myPage
+  ionic g provider MyData
+
+https://github.com/yuyang041060120/ng2-animate/blob/master/src/animations/zoom.ts
+
+https://yuyang041060120.github.io/ng2-animate/

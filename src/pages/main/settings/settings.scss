@@ -1,0 +1,49 @@
+page-settings {
+
+  .scroll-content {
+    overflow: hidden;
+  }
+  ion-content {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #settings_wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  ion-grid {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    max-width: 50%;
+  }
+
+  #img_back_wrapper {
+    max-width: 10%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+  #img_title_wrapper {
+    padding: 15%;
+  }
+
+  .img_music_wrapper {
+    width: 37%;
+    margin: auto;
+  }
+  .img_sound_wrapper, .img_vibration_wrapper {
+    width: 90%;
+  }
+
+  #img_back_wrapper > img, .img_vibration_wrapper>img, .img_sound_wrapper > img, .img_music_wrapper > img {
+    cursor: pointer;
+  }
+  #over {
+    position: absolute;
+    bottom: 10px; width:100%;
+  }
+}

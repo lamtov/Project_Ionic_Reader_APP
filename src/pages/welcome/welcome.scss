@@ -1,0 +1,57 @@
+page-welcome {
+
+  $background_welcome: rgba(30, 22, 47, 0.28);
+
+  .scroll-content {
+    background-color: $background_welcome;
+    opacity: 0.8;
+    overflow: hidden;
+    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ion-content {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  ion-grid {
+    z-index: 10;
+    position: absolute;
+    padding: 0 30px !important;
+    bottom: 5%;
+  }
+  .icon_button {
+    margin-right: 10px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  h1 {
+    font-size: 72px;
+    border: 3px solid #fff;
+    display: inline-block;
+    line-height: 72px;
+    padding: 10px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .btn_border_welcome {
+    border-width: 1px !important;
+  }
+  .btn_color {
+    color: #cfcfcf;
+  }
+  .terms_and_conditions {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .terms_and_conditions > h6{
+    font-size: 14px;
+    cursor: pointer;
+    color: #cfcfcf;
+  }
+}
